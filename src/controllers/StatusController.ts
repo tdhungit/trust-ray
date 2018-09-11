@@ -61,8 +61,8 @@ export class StatusController {
                 }
             });
         }).catch((err: Error) => {
-            winston.error("Failed to load initial block state in getStatus: " + err);
-            sendJSONresponse(res, 200, {error: err})
+            winston.error("Failed to load initial block state in getStatus: " + err + ", on server: " + config.get("RPC_SERVER"));
+            sendJSONresponse(res, 200, {error: "error RPC_SERVER:" + config.get("RPC_SERVER")})
         });
     }
 }

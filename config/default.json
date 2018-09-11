@@ -2,7 +2,8 @@
     "MONGO": {
         "URI": "mongodb://localhost:27017/trust-wallet"
     },
-    "RPC_SERVER": "http://127.0.0.1:8545",
+    //"RPC_SERVER": "http://127.0.0.1:8545",
+    "RPC_SERVER": "https://ropsten.infura.io/be1b6bb3b4984324b76ba0d84fe6c8bf",
     "NETWORK_SYMBOL": "ETH",
     "PUSHER": {
         "APN": {
