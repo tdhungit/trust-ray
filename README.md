@@ -21,6 +21,8 @@ API for the Trust Ethereum Wallet.
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
+* Config RPC_SERVER:
+```config/default.json```
 * Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install required modules:
   ```$ npm install```
@@ -37,6 +39,8 @@ API for the Trust Ethereum Wallet.
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
+* Config RPC_SERVER:
+```config/default.json```
 * Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install required modules:
   ```$ npm install```
