@@ -1,15 +1,15 @@
 import * as winston from "winston";
-import { Config } from "./Config";
-import { LastParsedBlock } from "../models/LastParsedBlockModel";
-import { Token } from "../models/TokenModel";
-import { TransactionParser } from "../common/TransactionParser";
-import { setDelay } from "./Utils";
-import { BlockchainState } from "./BlockchainState";
+import {Config} from "./Config";
+import {LastParsedBlock} from "../models/LastParsedBlockModel";
+import {Token} from "../models/TokenModel";
+import {TransactionParser} from "../common/TransactionParser";
+import {setDelay} from "./Utils";
+import {BlockchainState} from "./BlockchainState";
 
 export class TokensParser {
 
     private rebalanceOffsets: number = 20
-    
+
     start() {
         BlockchainState.getBlockState().then(([blockInChain, blockInDb]) => {
             const lastBlock: number = blockInDb.lastBlock
@@ -34,7 +34,9 @@ export class TokensParser {
         }).then(lastTokensBlock => {
             const nextBlock: number = lastTokensBlock + 1
             if (nextBlock <= lastBlock) {
-                setDelay(10).then(() => { this.startParsingNextBlock(nextBlock, lastBlock)} )
+                setDelay(10).then(() => {
+                    this.startParsingNextBlock(nextBlock, lastBlock)
+                })
             } else {
                 this.scheduleParsing()
             }

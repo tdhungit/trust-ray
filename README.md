@@ -1,13 +1,5 @@
 # :cloud: Trust Ray :cloud:
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/TrustWallet/trust-ray.svg)](https://greenkeeper.io/)
-
-[![Build Status](https://travis-ci.org/TrustWallet/trust-ray.svg?branch=master)](https://travis-ci.org/TrustWallet/trust-ray)
-[![License](https://img.shields.io/badge/license-GPL3-green.svg?style=flat)](https://github.com/fastlane/fastlane/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.io/rip32700/TrustWallet/trust-wallet-backend.svg)](http://hits.dwyl.io/rip32700/TrustWallet/trust-wallet-backend)
-[![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/TrustWallet/trust-ray/branches/token_endpoint/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/TrustWallet/trust-ray/branches/token_endpoint)
-
-
 API for the Trust Ethereum Wallet.
 
 ## Features
@@ -19,7 +11,7 @@ API for the Trust Ethereum Wallet.
 
 ## API [wiki](https://github.com/TrustWallet/trust-ray/wiki/API)
 
-    
+
 ## Deploy on Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/TrustWallet/trust-wallet-backend)
 
@@ -32,6 +24,51 @@ API for the Trust Ethereum Wallet.
    ```$ node dist/server.js```
 * Run tests:
    ```$ npm run build && npm test```
+
+## Use Nginx
+* Install required modules:
+  ```$ npm install```
+* Compile TypeScript:
+  ```$ npm run build```
+* Install nodejs: https://nodejs.org/en/
+* Install pm2:
+  ```$ npm install pm2 -g```
+* Start the app:
+   ```$ pm2 start dist/server.js```
+* Install nginx
+* Config nginx
+```
+map $http_upgrade $connection_upgrade {
+        default upgrade;
+        ''      close;
+}
+
+upstream websocket {
+        server 127.0.0.1:8000;
+}
+
+server {
+    server_name <your_domain>;
+
+    client_max_body_size 0;
+    chunked_transfer_encoding on;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade; #for websockets
+        proxy_set_header Connection $connection_upgrade;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_redirect off;
+
+        proxy_connect_timeout       600s;
+        proxy_send_timeout          600s;
+        proxy_read_timeout          600s;
+    }
+}
+```
 
 ## Docker containers
 Install docker and docker-compose.
