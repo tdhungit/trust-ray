@@ -18,8 +18,8 @@ API for the Trust Ethereum Wallet.
 ## Locally (without docker)
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
+* ```$ cd trust-ray```
 * Install required modules:
-  ```$ cd trust-ray```
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
@@ -31,8 +31,8 @@ API for the Trust Ethereum Wallet.
 ## Use Nginx
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
+* ```$ cd trust-ray```
 * Install required modules:
-  ```$ cd trust-ray```
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
