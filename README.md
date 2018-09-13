@@ -24,7 +24,7 @@ API for the Trust Ethereum Wallet.
 * Compile TypeScript:
   ```$ npm run build```
 * Start the app:
-   ```$ node dist/server.js```
+   ```$ node ./dist/server.js```
 * Run tests:
    ```$ npm run build && npm test```
 
@@ -40,7 +40,7 @@ API for the Trust Ethereum Wallet.
 * Install pm2:
   ```$ npm install pm2 -g```
 * Start the app:
-   ```$ pm2 start dist/server.js```
+   ```$ pm2 start ./dist/server.js```
 * Install nginx
 * Config nginx
 ```
