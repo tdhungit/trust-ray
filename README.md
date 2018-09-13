@@ -21,6 +21,7 @@ API for the Trust Ethereum Wallet.
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
+* Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install required modules:
   ```$ npm install```
 * Compile TypeScript:
@@ -36,11 +37,11 @@ API for the Trust Ethereum Wallet.
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
+* Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install required modules:
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
-* Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install pm2:
   ```$ npm install pm2 -g```
 * Start the app:
