@@ -16,6 +16,8 @@ API for the Trust Ethereum Wallet.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/TrustWallet/trust-wallet-backend)
 
 ## Locally (without docker)
+* Install Mogodb: https://docs.mongodb.com/manual/administration/install-community/
+* Start mongodb with port 27017
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
@@ -29,6 +31,8 @@ API for the Trust Ethereum Wallet.
    ```$ npm run build && npm test```
 
 ## Use Nginx
+* Install Mogodb: https://docs.mongodb.com/manual/administration/install-community/
+* Start mongodb with port 27017
 * Get source:
 ```$ git clone https://github.com/tdhungit/trust-ray.git```
 * ```$ cd trust-ray```
@@ -36,7 +40,7 @@ API for the Trust Ethereum Wallet.
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
-* Install nodejs: https://nodejs.org/en/
+* Install nodejs: https://nodejs.org/en/download/package-manager/
 * Install pm2:
   ```$ npm install pm2 -g```
 * Start the app:
