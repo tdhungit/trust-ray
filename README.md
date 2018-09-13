@@ -16,7 +16,10 @@ API for the Trust Ethereum Wallet.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/TrustWallet/trust-wallet-backend)
 
 ## Locally (without docker)
+* Get source:
+```$ git clone https://github.com/tdhungit/trust-ray.git```
 * Install required modules:
+  ```$ cd trust-ray```
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
@@ -26,7 +29,10 @@ API for the Trust Ethereum Wallet.
    ```$ npm run build && npm test```
 
 ## Use Nginx
+* Get source:
+```$ git clone https://github.com/tdhungit/trust-ray.git```
 * Install required modules:
+  ```$ cd trust-ray```
   ```$ npm install```
 * Compile TypeScript:
   ```$ npm run build```
